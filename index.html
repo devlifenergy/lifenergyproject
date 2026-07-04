@@ -1,19 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Caderno de Ouro</title>
+  <title>Caderno de Ouro Lifenergy</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="container">
-    <h1>Caderno de Ouro</h1>
-    <p>Desenvolvimento humano e organizacional pela metodologia Lifenergy.</p>
 
-    <section class="card">
-      <h2>Bem-vindo</h2>
-      <p>Use este espaço para apresentar o projeto, atividades, perguntas ou orientações.</p>
-      <button onclick="iniciar()">Iniciar</button>
-    </section>
+  <main class="container">
+    <h1>Caderno de Ouro Lifenergy</h1>
+
+    <form id="lifenergyForm">
+
+      <section class="card">
+        <h2>Registro</h2>
+
+        <label>Data da Aplicação</label>
+        <input type="text" id="dataAplicacao" readonly />
+
+        <label>Hora Inicial</label>
+        <input type="text" id="horaInicial" readonly />
+      </section>
+
+      <section class="card">
+        <h2>Identidade</h2>
+
+        <label>Nome Completo *</label>
+        <input type="text" required />
+
+        <label>E-mail *</label>
+        <input type="email" required />
+
+        <label>Naturalidade *</label>
+        <input type="text" required />
+
+        <label>CPF *</label>
+        <input type="number" required />
+
+        <label>Data de Nascimento *</label>
+        <input type="date" required />
+
+        <label>Qual é o seu objetivo em participar deste programa? *</label>
+        <textarea required></textarea>
+      </section>
+
+      <section class="card">
+        <h2>Registro de Aplicação</h2>
+
+        <label>Tipo de Aplicação *</label>
+        <select id="tipoAplicacao" required>
+          <option value="">Selecione</option>
+          <option value="Auto Aplicação">Auto Aplicação</option>
+          <option value="Aplicação Assistida">Aplicação Assistida</option>
+        </select>
+
+        <div id="campoAplicador" class="hidden">
+          <label>Nome do Aplicador *</label>
+          <input type="text" id="nomeAplicador" />
+        </div>
+
+        <label>Escolha da Atividade *</label>
+        <select required>
+          <option value="">Selecione</option>
+          <option value="A própria pessoa">A própria pessoa</option>
+          <option value="O aplicador">O aplicador</option>
+        </select>
+      </section>
+
+      <section class="card instructions">
+        <h2>Instruções</h2>
+
+        <p>
+          ENCONTRE UM AMBIENTE TRANQUILO, LIVRE DE INTERRUPÇÕES, OU UTILIZE UM COMPUTADOR COM UMA CONEXÃO ESTÁVEL À INTERNET.
+          VOCÊ RECEBE TAREFAS OU PADRÕES DE COMPORTAMENTO PARA DESENVOLVER.
+        </p>
+
+        <p>
+          É FUNDAMENTAL QUE CADA TAREFA SEJA REALIZADA DE FORMA CONTÍNUA, SEM INTERRUPÇÕES.
+          ELAS PODEM SER EXECUTADAS TANTO FISICAMENTE QUANTO DE MANEIRA IMAGINATIVA.
+        </p>
+
+        <p>
+          RECOMENDA-SE QUE VOCÊ RESPONDA DE FORMA ESPONTÂNEA, SEM EXCESSO DE REFLEXÃO,
+          POIS SE TRATA DE ATIVIDADES SIMPLES E ROTINEIRAS DO DIA A DIA.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Aplicação</h2>
+
+        <label>Fractal de Comportamento (Atividade) *</label>
+        <textarea required></textarea>
+      </section>
+
+      <section class="card">
+        <h2>Quadro de Registro de Dados</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Respostas</th>
+              <th>Hierarquia</th>
+              <th>Justificativa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="text" required /></td>
+              <td>
+                <select required>
+                  <option value="">Selecione</option>
+                  <option>3 - Maior Importância</option>
+                  <option>2 - Média Importância</option>
+                  <option>1 - Menor Importância</option>
+                </select>
+              </td>
+              <td><textarea required></textarea></td>
+            </tr>
+
+            <tr>
+              <td><input type="text" required /></td>
+              <td>
+                <select required>
+                  <option value="">Selecione</option>
+                  <option>3 - Maior Importância</option>
+                  <option>2 - Média Importância</option>
+                  <option>1 - Menor Importância</option>
+                </select>
+              </td>
+              <td><textarea required></textarea></td>
+            </tr>
+
+            <tr>
+              <td><input type="text" required /></td>
+              <td>
+                <select required>
+                  <option value="">Selecione</option>
+                  <option>3 - Maior Importância</option>
+                  <option>2 - Média Importância</option>
+                  <option>1 - Menor Importância</option>
+                </select>
+              </td>
+              <td><textarea required></textarea></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card">
+        <h2>Chegamos ao final</h2>
+
+        <label>Agora pare, pense e escreva como você está sentindo-se após essa tarefa. *</label>
+        <textarea required></textarea>
+      </section>
+
+      <button type="submit">Enviar Formulário</button>
+
+      <footer>
+        Agradecemos a sua participação.
+      </footer>
+
+    </form>
   </main>
 
   <script src="script.js"></script>
